@@ -41,7 +41,7 @@ function _pinyinToToneNumber(pinyin) {
 }
 
 function hanziToneColors(hanzi, pinyin) {
-    var pinyinTones = pinyinToToneNumber(pinyin);
+    var pinyinTones = _pinyinToToneNumber(pinyin);
     if (hanzi.length != pinyinTones.length) return hanzi;
     var coloredHanzi = '';
     for (var i = 0; i < hanzi.length; i++) {
