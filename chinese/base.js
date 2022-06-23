@@ -31,18 +31,26 @@ function _pinyinToToneNumber(pinyin) {
     var pinyinList = separatePinyinInSyllables(pinyin);
     toneList = [];
     pinyinList.forEach((item) => {
-        if(/['āēīōūǖ']+/.test(item)) {toneList.push(1);}
-        else if(/['áéíóúǘ']+/.test(item)) {toneList.push(2);}
-        else if(/['ǎěǐǒǔǚ']+/.test(item)) {toneList.push(3);}
-        else if(/['àèìòùǜ']+/.test(item)) {toneList.push(4);} 
-        else {toneList.push(5);}
+        if(item == '//') return;
+        else if(/['āēīōūǖ']+/.test(item)) toneList.push(1);
+        else if(/['áéíóúǘ']+/.test(item)) toneList.push(2);
+        else if(/['ǎěǐǒǔǚ']+/.test(item)) toneList.push(3);
+        else if(/['àèìòùǜ']+/.test(item)) toneList.push(4);
+        else toneList.push(5);
     });
     return toneList;
 }
 
+/**
+ * @param {string} hanzi - The hanzi to wrap with tone colors.
+ * @param {string} pinyin - The pinyin to get the tone colors from. You may
+ *      terminate the applicable pinyin text by using `//` in your string.
+ * @return {string} HTML of each hanzi character wrapped in a span tag with a
+ *      class of `tone-*`.
+ */
 function hanziToneColors(hanzi, pinyin) {
     var pinyinTones = _pinyinToToneNumber(pinyin);
-    if (hanzi.length != pinyinTones.length) return hanzi;
+    if (hanzi.length == pinyinTones.length) return hanzi;
     var coloredHanzi = '';
     for (var i = 0; i < hanzi.length; i++) {
         coloredHanzi += `<span class="tone-${pinyinTones[i]}">${hanzi[i]}</span>`;
