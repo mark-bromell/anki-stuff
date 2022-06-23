@@ -30,13 +30,14 @@ function toggle(sourceId, destinationId) {
 function _pinyinToToneNumber(pinyin) {
     var pinyinList = separatePinyinInSyllables(pinyin);
     toneList = [];
-    pinyinList.forEach((item) => {
-        if(item == '//') return;
+    pinyinList.every((item) => {
+        if(item == '//') return false;
         else if(/['āēīōūǖ']+/.test(item)) toneList.push(1);
         else if(/['áéíóúǘ']+/.test(item)) toneList.push(2);
         else if(/['ǎěǐǒǔǚ']+/.test(item)) toneList.push(3);
         else if(/['àèìòùǜ']+/.test(item)) toneList.push(4);
         else toneList.push(5);
+        return true;
     });
     return toneList;
 }
