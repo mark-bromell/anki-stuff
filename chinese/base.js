@@ -72,9 +72,8 @@ function hanziStrokes(hanzi, width = 100, height = 100) {
             strokeAnimationSpeed: 1.25,
             delayBetweenStrokes: 200,
             delayBetweenLoops: 500,
-            outlineColor: '#839496',
-            strokeColor: '#d33682',
-            radicalColor: '#E77218',
+            outlineColor: '#dbd5c2',
+            strokeColor: '#073642',
         });
         document.getElementById(`stroke-${i}`).addEventListener('click', function() {
             writer.animateCharacter();

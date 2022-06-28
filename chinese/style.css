@@ -27,7 +27,6 @@
 
 .link-btn {
     display: inline-block;
-    color: #93a1a1;
     text-decoration: underline;
 }
 
@@ -37,18 +36,38 @@
     font-weight: bold;
 }
 
+.hanzi {font-family: Kaiti !important}
 .text-decoration-none {text-decoration: none !important}
-.hide {display: none!important;}
+.hide {display: none !important}
 
-.tone-1 {color: #E77218 !important;}
-.tone-2 {color: #D33682 !important;}
-.tone-3 {color: #4497BF !important;}
-.tone-4 {color: #64BB00 !important;}
+.tone-1 {color: #E77218 !important}
+.tone-2 {color: #D33682 !important}
+.tone-3 {color: #4497BF !important}
+.tone-4 {color: #64BB00 !important}
 
-.font-size-1 {font-size: 1em}
-.font-size-2 {font-size: 1.25em}
-.font-size-3 {font-size: 1.5em}
-.font-size-4 {font-size: 2.25em}
+.color-base03 {color: #002b36 !important}
+.color-base02 {color: #073642 !important}
+.color-base01 {color: #586e75 !important}
+.color-base00 {color: #657b83 !important}
+.color-base0 {color: #839496 !important}
+.color-base1 {color: #93a1a1 !important}
+.color-base2 {color: #eee8d5 !important}
+.color-base3 {color: #fdf6e3 !important}
+.color-yellow {color: #b58900 !important}
+.color-orange {color: #cb4b16 !important}
+.color-red {color: #dc322f !important}
+.color-magenta {color: #d33682 !important}
+.color-violet {color: #6c71c4 !important}
+.color-blue {color: #268bd2 !important}
+.color-cyan {color: #2aa198 !important}
+.color-green {color: #859900 !important}
+
+.font-size-1 {font-size: 1rem !important}
+.font-size-2 {font-size: 1.25rem !important}
+.font-size-3 {font-size: 1.5rem !important}
+.font-size-4 {font-size: 2.25rem !important}
+.font-size-5 {font-size: 3rem !important}
+.font-size-6 {font-size: 5rem !important}
 
 .m-0 {margin: 0 !important}
 .m-1 {margin: 0.25rem !important}
